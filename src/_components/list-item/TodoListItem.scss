@@ -1,0 +1,95 @@
+.TodoListItem {
+  background-color: #fff;
+}
+
+.TodoListItem-add {
+  opacity: .5;
+}
+
+.TodoListItem__inner {
+  display: flex;
+  position: relative;
+}
+
+.TodoListItem__inner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 0;
+}
+
+.TodoListItem__inner:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 50%;
+  bottom: 0;
+  left: 15%;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease;
+  opacity: 0;
+}
+
+.TodoListItem__inner:hover:after {
+  opacity: 1;
+}
+
+.TodoListItem__inner > * {
+  position: relative;
+  background-color: #fff;
+  text-align: left;
+}
+
+.TodoListItem + .TodoListItem {
+  margin-top: 10px;
+}
+
+.TodoListItem__toggle,
+.TodoListItem__remove {
+  flex: 0 0;
+  padding: 0 1rem;
+  border: 0;
+  cursor: pointer;
+  background-color: #fff;
+  line-height: 34px;
+}
+
+.TodoListItem__toggle {
+  flex: 0 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.empty-label .TodoListItem__toggle {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.TodoListItem__label {
+  flex: 1 1;
+  border: 0;
+  line-height: 34px;
+}
+
+.TodoListItem-add .TodoListItem__label {
+  cursor: pointer;
+}
+
+.TodoListItem__label:focus {
+  outline: 0;
+}
+
+.TodoListItem__remove {
+  color: #ec4344;
+  transition: all 200ms ease;
+  opacity: 0.5;
+}
+
+.TodoListItem__remove:hover {
+  opacity: 1;
+}

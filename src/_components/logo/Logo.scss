@@ -1,0 +1,25 @@
+.Logo {
+  display: inline-block;
+  position: relative;
+  width: 320px;
+}
+
+.Logo__app-name {
+  position: absolute;
+  top: 45px;
+  left: 127px;
+  height: 40px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  background-color: #f99d28;
+  color: #e5e5e5;
+  line-height: 14px;
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+  text-shadow: 0 0 20px #c77e20;
+}
+
+.Logo__svg {
+  width: 100%;
+}
